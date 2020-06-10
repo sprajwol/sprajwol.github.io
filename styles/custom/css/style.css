@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #222222;
     color: #e4e4e4;
@@ -27,7 +31,15 @@ body {
     margin-bottom: 50px;
 }
 
+/* Navbar */
+.nav-background {
+    background-color: rgba(0,0,0,0.6);
+}
+
 /* Home */
+#main {
+    color: #e4e4e4;
+}
 .bannerBackgroundImage {
     width: auto;
     height: 100%;
@@ -62,12 +74,21 @@ body {
 
 .contactMeBtn {
     text-transform: uppercase;
-    border: 1px solid #e4e4e4;
-    border-radius: 5%;
+    border: 2px solid #e4e4e4;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: #e4e4e4;
     padding-top:0.6em;
     padding-bottom: 0.6em;
     padding-left: 1.2em;
     padding-right: 1.2em;
+    color: #222222;
+}
+
+.contactMeBtn:hover {
+    text-decoration: none;
+    color: #222222;
+    background-color: rgba(255,255,255,0.4);
 }
 
 .socialMediaIconsWrapper {
@@ -77,10 +98,31 @@ body {
     font-size: 2em;
 }
 
+.socialLinker {
+    color: #e4e4e4;
+}
+
+.socialLinker i {
+    transition: ease-in-out 0.3s; 
+}
+
+.socialLinker:hover i{
+    text-decoration: none;
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
 .nextSectionArrowLink {
     font-size: 2em;
     animation: scrolling 3s ease infinite;
+    color: #e4e4e4;
 }
+
+.nextSectionArrowLink:hover {
+    text-decoration: none;
+    color: #e4e4e4;
+}
+
 .nextSectionArrowLink i{
     -webkit-animation: scrolling 3s ease infinite;
     -moz-animation: scrolling 3s ease infinite;
@@ -118,6 +160,7 @@ body {
 /* My Projects */
 #myprojects {
 }
+
 /* Contact */
 #contact {
     background-color: #e4e4e4;
