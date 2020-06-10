@@ -1,19 +1,32 @@
 body {
     background-color: #222222;
-    color: whitesmoke;
+    color: #e4e4e4;
 }
 
 #loader {
     display: none;
 }
 
-.mt-50 {
-    margin-top: 50px;
+.pt-40 {
+    padding-top: 40px;
+}
+
+.pb-40 {
+    padding-bottom: 40px;
 }
 
 .mt-30 {
     margin-top: 30px;
 }
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.webpage-main {
+    margin-bottom: 50px;
+}
+
 /* Home */
 .bannerBackgroundImage {
     width: auto;
@@ -49,7 +62,7 @@ body {
 
 .contactMeBtn {
     text-transform: uppercase;
-    border: 1px solid whitesmoke;
+    border: 1px solid #e4e4e4;
     border-radius: 5%;
     padding-top:0.6em;
     padding-bottom: 0.6em;
@@ -87,6 +100,10 @@ body {
 }
 
 /* About */
+#about {
+    background-color: #e4e4e4;
+    color: #222222;
+}
 .section-heading {
     text-align: center;
     font-size: 2em;
@@ -96,4 +113,32 @@ body {
 .twitter-feed {
     margin: auto;
     width: 80vw;
+}
+
+/* My Projects */
+#myprojects {
+}
+/* Contact */
+#contact {
+    background-color: #e4e4e4;
+    color: #222222;
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+}
+
+.contactOr {
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.contactMailMessenger {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2em;
 }
