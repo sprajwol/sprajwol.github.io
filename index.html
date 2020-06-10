@@ -126,8 +126,19 @@
                 About
             </div>
             <div class="section-content mt-30">
-                <div class="content-text"></div>
-                <div class="twitter-feed">
+                <div class="content-text spacer">
+                    <p class="desc">
+                        I'm from Computer Science background and my journey began from my college where we did various
+                        software developmen projects.
+                        Learn programming languages from C, C++, PHP, JAVA from various course related projects and also
+                        dabbled on C#, Xamarin, Flutter but finally settled on Python.
+                        There are couple of public projects in my Github Account.
+                    </p>
+                    <p class="followerCount">
+
+                    </p>
+                </div>
+                <div class="twitter-feed spacer">
                     <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
                         href="https://twitter.com/sprazwol?ref_src=twsrc%5Etfw">Tweets by sprazwol</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -138,19 +149,23 @@
             <div class="section-heading">
                 My Projects
             </div>
-            <div class="section-content mt-30">
-                <div class="githubIco">
-                    <a href="" class="githubLink" target="_blank" nofollow>
-                        <i class="fab fa-github-square"></i>
-                    </a>
-                </div>
+            <div class="section-subheading spacer">
+                My repositories list from <a href="" class="githubLink githubLinkText" target="_blank" nofollow>
+                    Github
+                </a>
+                <span>Click on repository name to open it in Github.</span>
+            </div>
+            <div class="section-content spacer mt-30">
+                <ul id="repoList">
+
+                </ul>
             </div>
         </section>
         <section id="contact" class="pt-40 pb-40">
             <div class="section-heading">
                 Contact
             </div>
-            <div class="section-content container mt-30">
+            <div class="section-content contact-c spacer mt-30">
                 <div class="contactFormWrapper">
                     <form action="">
                         <div class="nameWrapper">
@@ -219,8 +234,27 @@
                 githubLinks.forEach(eachElement => {
                     eachElement.href = data['html_url'];
                 });
-            });
 
+                var followerCount = document.getElementsByClassName('followerCount')[0];
+                followerCount.innerHTML = "" + data['followers'] + " awesome people follows me on Github."
+            });
+    </script>
+    <script>
+
+        fetch("https://api.github.com/users/sprajwol/repos")
+            .then(response => response.json())
+            .then(function (data) {
+                completeCode = ""
+                data.forEach(eachDataItem => {
+                    // console.log(eachDataItem['name']);
+                    // console.log(eachDataItem['html_url']);
+                    code = "<li><a href='" + eachDataItem['html_url'] + "' target='_blank' nofollow>" + eachDataItem['name'] + "</a></li>"
+                    completeCode += code
+                });
+                console.log(completeCode)
+                var repoList = document.getElementById('repoList');
+                repoList.innerHTML = completeCode
+            });
     </script>
     <script>
         $('.navbar-collapse a').click(function () {

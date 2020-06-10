@@ -7,6 +7,11 @@ body {
     color: #e4e4e4;
 }
 
+.spacer {
+    width: 80%;
+    margin: auto;
+}
+
 #loader {
     display: none;
 }
@@ -25,10 +30,6 @@ body {
 
 .mt-20 {
     margin-top: 20px;
-}
-
-.webpage-main {
-    margin-bottom: 50px;
 }
 
 /* Navbar */
@@ -146,28 +147,71 @@ body {
     background-color: #e4e4e4;
     color: #222222;
 }
+
 .section-heading {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
 }
 
-.twitter-feed {
-    margin: auto;
-    width: 80vw;
+.content-text {
+    text-align: justify;
+    padding-bottom: 0.6em;
+}
+
+.followerCount {
+    font-weight: bold;
 }
 
 /* My Projects */
-#myprojects {
+#repoList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
+#repoList li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.githubLinkText {
+    color: #e4e4e4;
+    transition: ease-in-out .3s;
+}
+
+.githubLinkText:hover {
+    text-decoration: none;
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+.section-subheading {
+    font-size: 1.4em;
+}
+
+.section-subheading span {
+    display: block;
+    font-size: .6em;
+    color: gray;
+}
+
+#repoList li a{
+    color: #cccccc;
+}
+
+#repoList li a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
 /* Contact */
 #contact {
     background-color: #e4e4e4;
     color: #222222;
 }
 
-.section-content {
+.contact-c {
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 10px;
@@ -177,6 +221,7 @@ body {
     border-color: #222222;
     box-shadow: 0 0 0 0.2rem rgba(34, 34, 34, 0.25)
 }
+
 .contactOr {
     font-size: 2em;
     text-align: center;
@@ -198,3 +243,7 @@ body {
     color: #222222;
     text-decoration: none;
 }
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 992px) {}
