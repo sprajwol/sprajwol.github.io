@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="styles/vendor/NormalizeCSS/normalize.css">
     <!-- Fav Ico-->
     <link rel="shortcut icon" href="">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/vendor/bootstrap-4.4.1-dist/css/bootstrap.css">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="styles/vendor/fontawesome-free-5.12.1-web/css/all.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/custom/css/style.css">
     <link rel="stylesheet" href="styles/custom/css/loader.css">
 </head>
 
 <body>
-    <section id="loading">
+    <div id="loader">
         <div class="lds-grid">
             <div></div>
             <div></div>
@@ -28,14 +32,160 @@
             <div></div>
             <div></div>
         </div>
-    </section>
-    <section id="webpage">
-        <header></header>
-        <main>asasdas</main>
-        <footer></footer>
-    </section>
+    </div>
 
-    <script src="styles/customs/js/script.js"></script>
+    <header class="webpage-header">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#main">
+                Navbar
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#main">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#myprojects">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="webpage-main">
+        <section id="main">
+            <div class="bannerWrapper">
+                <div class="bannerBackground">
+                    <img src="static/images/background.jpg" alt="Laptop" class="bannerBackgroundImage">
+                </div>
+                <div class="bannerContent">
+                    <div class="introWrapper">
+                        <div class="introImage">
+                            <figure>
+                                <img src="" class="profileImage" alt="">
+                            </figure>
+                        </div>
+                        <div class="introText">
+                            <div class="mainIntroText"></div>
+                            <div class="subIntroText"></div>
+                        </div>
+                    </div>
+                    <div class="contactBtnWrapper">
+                        <a href="#contact" class="contactMeBtn">contact me</a>
+                    </div>
+                    <div class="socialMediaIconsWrapper">
+                        <div class="facebookIco">
+                            <a href="https://www.facebook.com/sprazwol" class="facebookLink" target="_blank" nofollow>
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </div>
+                        <div class="githubIco">
+                            <a href="" class="githubLink" target="_blank" nofollow>
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </div>
+                        <div class="twitterIco">
+                            <a href="https://twitter.com/sprazwol" class="twitterLink" target="_blank" nofollow>
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </div>
+                        <div class="linkedinIco">
+                            <a href="https://www.linkedin.com/in/sprajwol/" class="linkedinLink" target="_blank"
+                                nofollow>
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nextSectionArrow">
+                        <a href="#" class="nextSectionArrowLink">
+                            <i class="fas fa-angle-double-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="mt-50">
+            <div class="section-heading">
+                About
+            </div>
+            <div class="section-content mt-30">
+                <div class="content-text"></div>
+                <div class="twitter-feed">
+                    <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
+                        href="https://twitter.com/sprazwol?ref_src=twsrc%5Etfw">Tweets by sprazwol</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
+        <section id="myprojects" class="mt-50">
+            <div class="section-heading">
+                My Projects
+            </div>
+            <div class="section-content">
+                <div class="githubIco">
+                    <a href="" class="githubLink" target="_blank" nofollow>
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="mt-50">
+            <div class="section-heading">
+                Contact
+            </div>
+            <div class="section-content"></div>
+        </section>
+    </main>
+
+    <footer class="webpage-footer"></footer>
+
+    <!-- jQuery Linking -->
+    <script src="styles/vendor/jQuery/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="styles/vendor/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
+    <!-- Custom JS -->
+    <script>
+        fetch("https://api.github.com/users/sprajwol")
+            .then(response => response.json())
+            .then(function (data) {
+                console.log(data)
+                var profileImage = document.getElementsByClassName('profileImage')[0];
+                profileImage.src = data['avatar_url'];
+
+                var mainIntro = document.getElementsByClassName('mainIntroText')[0];
+                mainIntro.innerHTML = "<p><h2>Hi,<br/>I'm Prajwol Man Shakya.</h2></p>";
+
+                var subIntro = document.getElementsByClassName('subIntroText')[0];
+                if (data['bio'] != null) {
+                    subIntro.innerHTML = "<p><h6>" + data['bio'] + "</h6></p>";
+                } else {
+                    console.log('no bio');
+                }
+
+                var githubLinks = document.querySelectorAll('.githubLink');
+                console.log(githubLinks)
+                githubLinks.forEach(eachElement => {
+                    eachElement.href = data['html_url'];
+                });
+            });
+
+    </script>
+    <script src="styles/custom/js/script.js"></script>
 </body>
 
 </html>

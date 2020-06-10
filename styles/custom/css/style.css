@@ -1,3 +1,99 @@
 body {
-    background-color: #e4e4e4;
+    background-color: #222222;
+    color: whitesmoke;
+}
+
+#loader {
+    display: none;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+/* Home */
+.bannerBackgroundImage {
+    width: auto;
+    height: 100%;
+}
+
+.bannerBackground {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bannerContent {
+    margin-top: 4em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profileImage {
+    width: 60vw;
+    border-radius: 5%;
+}
+
+.contactBtnWrapper {
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+}
+
+.contactMeBtn {
+    text-transform: uppercase;
+    border: 1px solid whitesmoke;
+    border-radius: 5%;
+    padding-top:0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+}
+
+.socialMediaIconsWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2em;
+}
+
+.nextSectionArrowLink {
+    font-size: 2em;
+    animation: scrolling 3s ease infinite;
+}
+.nextSectionArrowLink i{
+    -webkit-animation: scrolling 3s ease infinite;
+    -moz-animation: scrolling 3s ease infinite;
+    -o-animation: scrolling 3s ease infinite;
+    animation: scrolling 3s ease infinite;
+}
+@keyframes scrolling {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(0,20px);
+  }
+    100% {
+      transform: translate(0);
+    }
+}
+
+/* About */
+.section-heading {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.twitter-feed {
+    margin: auto;
+    width: 80vw;
 }
