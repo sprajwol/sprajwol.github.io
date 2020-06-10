@@ -173,6 +173,10 @@ body {
     grid-row-gap: 10px;
 }
 
+.form-control:focus {
+    border-color: #222222;
+    box-shadow: 0 0 0 0.2rem rgba(34, 34, 34, 0.25)
+}
 .contactOr {
     font-size: 2em;
     text-align: center;
@@ -184,4 +188,13 @@ body {
     flex-direction: row;
     justify-content: center;
     font-size: 2em;
+}
+
+.contactMailMessenger a {
+    color: #222222;
+}
+
+.contactMailMessenger a:hover {
+    color: #222222;
+    text-decoration: none;
 }
