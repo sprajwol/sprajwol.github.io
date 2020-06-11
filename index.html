@@ -138,7 +138,7 @@
 
                     </p>
                 </div>
-                <div class="twitter-feed spacer">
+                <div class="twitter-feed spacer text-center">
                     <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
                         href="https://twitter.com/sprazwol?ref_src=twsrc%5Etfw">Tweets by sprazwol</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -220,11 +220,11 @@
                 profileImage.src = data['avatar_url'];
 
                 var mainIntro = document.getElementsByClassName('mainIntroText')[0];
-                mainIntro.innerHTML = "<p><h2>Hi,<br/>I'm Prajwol Man Shakya.</h2></p>";
+                mainIntro.innerHTML = "<p>Hi,<br/>I'm Prajwol Man Shakya.</p>";
 
                 var subIntro = document.getElementsByClassName('subIntroText')[0];
                 if (data['bio'] != null) {
-                    subIntro.innerHTML = "<p><h6>" + data['bio'] + "</h6></p>";
+                    subIntro.innerHTML = "<p>" + data['bio'] + "</p>";
                 } else {
                     console.log('no bio');
                 }
