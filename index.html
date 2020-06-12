@@ -9,11 +9,22 @@
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="styles/vendor/NormalizeCSS/normalize.css">
     <!-- Fav Ico-->
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicon-16x16.png">
+
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicon-32x32.png">
+
+    <link rel="shortcut icon" sizes="192x192" href="static/images/android-chrome-192x192.png">
+
+    <link rel="shortcut icon" sizes="512x512" href="static/images/android-chrome-512x512.png">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="styles/vendor/bootstrap-4.4.1-dist/css/bootstrap.css">
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="styles/vendor/fontawesome-free-5.12.1-web/css/all.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600;700&family=Lobster&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/custom/css/style.css">
     <link rel="stylesheet" href="styles/custom/css/loader.css">
@@ -33,178 +44,182 @@
             <div></div>
         </div>
     </div>
+    <div id="webpage" hidden>
+        <header class="webpage-header">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-background">
+                <a class="navbar-brand" href="index.html">
+                    <img src="static/images/android-chrome-192x192.png" alt="Logo" class="webpage-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <header class="webpage-header">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top nav-background">
-            <a class="navbar-brand" href="index.html">
-                Navbar
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#myprojects">My Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <!-- <form class="form-inline my-2 my-lg-0">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#main">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#myprojects">My Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <!-- <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form> -->
-            </div>
-        </nav>
-    </header>
-
-    <main class="webpage-main">
-        <section id="main">
-            <div class="bannerWrapper">
-                <div class="bannerBackground">
-                    <img src="static/images/background.jpg" alt="Laptop" class="bannerBackgroundImage">
                 </div>
-                <div class="bannerContent">
-                    <div class="introWrapper">
+            </nav>
+        </header>
+
+        <main class="webpage-main">
+            <section id="main">
+                <div class="bannerWrapper">
+                    <div class="bannerBackground">
+                        <img src="static/images/background.jpg" alt="Laptop" class="bannerBackgroundImage">
+                    </div>
+                    <div class="bannerContent">
                         <div class="introImage">
                             <figure>
                                 <img src="" class="profileImage" alt="">
                             </figure>
                         </div>
-                        <div class="introText">
-                            <div class="mainIntroText"></div>
-                            <div class="subIntroText"></div>
+                        <div class="Infos">
+                            <div class="introText">
+                                <div class="mainIntroText"></div>
+                                <div class="subIntroText"></div>
+                            </div>
+                            <div class="contactBtnWrapper">
+                                <a href="#contact" class="contactMeBtn">contact me</a>
+                            </div>
+                            <div class="socialMediaIconsWrapper">
+                                <div class="facebookIco">
+                                    <a href="https://www.facebook.com/sprazwol" class="facebookLink socialLinker"
+                                        target="_blank" nofollow>
+                                        <i class="fab fa-facebook-square"></i>
+                                    </a>
+                                </div>
+                                <div class="githubIco">
+                                    <a href="" class="githubLink socialLinker" target="_blank" nofollow>
+                                        <i class="fab fa-github-square"></i>
+                                    </a>
+                                </div>
+                                <div class="twitterIco">
+                                    <a href="https://twitter.com/sprazwol" class="twitterLink socialLinker"
+                                        target="_blank" nofollow>
+                                        <i class="fab fa-twitter-square"></i>
+                                    </a>
+                                </div>
+                                <div class="linkedinIco">
+                                    <a href="https://www.linkedin.com/in/sprajwol/" class="linkedinLink socialLinker"
+                                        target="_blank" nofollow>
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contactBtnWrapper">
-                        <a href="#contact" class="contactMeBtn">contact me</a>
-                    </div>
-                    <div class="socialMediaIconsWrapper">
-                        <div class="facebookIco">
-                            <a href="https://www.facebook.com/sprazwol" class="facebookLink socialLinker"
-                                target="_blank" nofollow>
-                                <i class="fab fa-facebook-square"></i>
+                        <div class="break"></div>
+                        <div class="nextSectionArrow">
+                            <a href="#about" class="nextSectionArrowLink">
+                                <i class="fas fa-angle-double-down"></i>
                             </a>
                         </div>
-                        <div class="githubIco">
-                            <a href="" class="githubLink socialLinker" target="_blank" nofollow>
-                                <i class="fab fa-github-square"></i>
-                            </a>
-                        </div>
-                        <div class="twitterIco">
-                            <a href="https://twitter.com/sprazwol" class="twitterLink socialLinker" target="_blank"
-                                nofollow>
-                                <i class="fab fa-twitter-square"></i>
-                            </a>
-                        </div>
-                        <div class="linkedinIco">
-                            <a href="https://www.linkedin.com/in/sprajwol/" class="linkedinLink socialLinker"
-                                target="_blank" nofollow>
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="nextSectionArrow">
-                        <a href="#" class="nextSectionArrowLink">
-                            <i class="fas fa-angle-double-down"></i>
-                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section id="about" class="pt-40 pb-40">
-            <div class="section-heading">
-                About
-            </div>
-            <div class="section-content mt-30">
-                <div class="content-text spacer">
-                    <p class="desc">
-                        I'm from Computer Science background and my journey began from my college where we did various
-                        software developmen projects.
-                        Learn programming languages from C, C++, PHP, JAVA from various course related projects and also
-                        dabbled on C#, Xamarin, Flutter but finally settled on Python.
-                        There are couple of public projects in my Github Account.
-                    </p>
-                    <p class="followerCount">
+            </section>
+            <section id="about" class="pt-40 pb-40">
+                <div class="section-heading">
+                    About
+                </div>
+                <div class="section-content mt-30">
+                    <div class="content-text spacer">
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sed odit similique tempora
+                            recusandae. Quaerat, numquam hic. Iusto sapiente quam possimus non in inventore explicabo,
+                            ullam, alias repellat quos hic?
+                        </p>
+                        <p class="followerCount">
 
-                    </p>
-                </div>
-                <div class="twitter-feed spacer text-center">
-                    <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
-                        href="https://twitter.com/sprazwol?ref_src=twsrc%5Etfw">Tweets by sprazwol</a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                </div>
-            </div>
-        </section>
-        <section id="myprojects" class="pt-40 pb-40">
-            <div class="section-heading">
-                My Projects
-            </div>
-            <div class="section-subheading spacer">
-                My repositories list from <a href="" class="githubLink githubLinkText" target="_blank" nofollow>
-                    Github
-                </a>
-                <span>Click on repository name to open it in Github.</span>
-            </div>
-            <div class="section-content spacer mt-30">
-                <ul id="repoList">
-
-                </ul>
-            </div>
-        </section>
-        <section id="contact" class="pt-40 pb-40">
-            <div class="section-heading">
-                Contact
-            </div>
-            <div class="section-content contact-c spacer mt-30">
-                <div class="contactFormWrapper">
-                    <form action="">
-                        <div class="nameWrapper">
-                            <label for="name">Full Name:</label>
-                            <input type="text" name="name" class="form-control">
-                        </div>
-                        <div class="emailWrapper mt-20">
-                            <label for="email">Email Address:</label>
-                            <input type="email" name="email" class="form-control">
-                        </div>
-                        <div class="messageWrapper mt-20">
-                            <label for="message">Message:</label>
-                            <textarea name="message" id="messsageId" rows="5" class="form-control"></textarea>
-                        </div>
-                        <div class="submitButton mt-20">
-                            <button type="submit" class="form-control">Send</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="contactOr">
-                    Or
-                </div>
-                <div class="contactMailMessenger">
-                    <div class="messengerIco px-4">
-                        <a href="https://m.me/sprazwol" target="_blank" class="messengerIcoLink" nofollow>
-                            <i class="fab fa-facebook-messenger"></i>
-                        </a>
+                        </p>
                     </div>
-                    <div class="mailIco px-4">
-                        <a href="mailto:shakyaprajwol96@gmail.com" target="_blank" class="mailIcoLink" nofollow>
-                            <i class="fas fa-at"></i>
-                        </a>
+                    <div class="twitter-feed spacer text-center">
+                        <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark"
+                            href="https://twitter.com/sprazwol?ref_src=twsrc%5Etfw">Tweets by sprazwol</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+            <section id="myprojects" class="pt-40 pb-40">
+                <div class="section-heading">
+                    My Projects
+                </div>
+                <div class="section-subheading spacer">
+                    My repositories list from <a href="" class="githubLink githubLinkText" target="_blank" nofollow>
+                        Github
+                    </a>
+                    <span>Click on repository name to open it in Github.</span>
+                </div>
+                <div class="section-content spacer mt-30">
+                    <ul id="repoList">
 
-    <footer class="webpage-footer"></footer>
+                    </ul>
+                </div>
+            </section>
+            <section id="contact" class="pt-40 pb-40">
+                <div class="section-heading">
+                    Contact
+                </div>
+                <div class="section-content contact-c spacer mt-30">
+                    <div class="contactFormWrapper">
+                        <form action="">
+                            <div class="nameWrapper">
+                                <label for="name">Full Name:</label>
+                                <input type="text" name="name" class="form-control">
+                            </div>
+                            <div class="emailWrapper mt-20">
+                                <label for="email">Email Address:</label>
+                                <input type="email" name="email" class="form-control">
+                            </div>
+                            <div class="messageWrapper mt-20">
+                                <label for="message">Message:</label>
+                                <textarea name="message" id="messsageId" rows="5" class="form-control"></textarea>
+                            </div>
+                            <div class="submitButton mt-20">
+                                <button type="submit" class="form-control">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contactOr">
+                        Or
+                    </div>
+                    <div class="contactMailMessenger">
+                        <div class="messengerIco px-4">
+                            <a href="https://m.me/sprazwol" target="_blank" class="messengerIcoLink" nofollow>
+                                <i class="fab fa-facebook-messenger"></i>
+                            </a>
+                        </div>
+                        <div class="mailIco px-4">
+                            <a href="mailto:shakyaprajwol96@gmail.com" target="_blank" class="mailIcoLink" nofollow>
+                                <i class="fas fa-at"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="webpage-footer text-center py-4">
+            Designed By: Prajwol Man Shakya
+        </footer>
+    </div>
+
 
     <!-- jQuery Linking -->
     <script src="styles/vendor/jQuery/jquery-3.3.1.min.js"></script>
@@ -212,7 +227,8 @@
     <script src="styles/vendor/bootstrap-4.4.1-dist/js/bootstrap.js"></script>
     <!-- Custom JS -->
     <script>
-        fetch("https://api.github.com/users/sprajwol")
+        fetch("https://api.github.com/users/sprajwol", {
+        })
             .then(response => response.json())
             .then(function (data) {
                 console.log(data)
@@ -259,6 +275,8 @@
     <script>
         $('.navbar-collapse a').click(function () {
             $(".navbar-collapse").collapse('hide');
+            $(".active").removeClass('active');
+            $(this).addClass('active');
         });
     </script>
     <script src="styles/custom/js/script.js"></script>

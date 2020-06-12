@@ -1,9 +1,16 @@
+/* Fonts */
+/* font-family: 'Josefin Slab', serif; */
+/* font-family: 'Lobster', cursive; */
+/* font-family: 'Roboto Slab', serif; */
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     background-color: #222222;
+    
+    font-family: 'Roboto Slab', serif;
     color: #e4e4e4;
 }
 
@@ -12,8 +19,9 @@ body {
     margin: auto;
 }
 
-#loader {
-    display: none;
+.break {
+    flex-basis: 0%;
+    height: 0;
 }
 
 .pt-40 {
@@ -33,6 +41,10 @@ body {
 }
 
 /* Navbar */
+.webpage-logo {
+ width: 40px;
+}
+
 .nav-background {
     background-color: rgba(0,0,0,0.6);
 }
@@ -41,6 +53,7 @@ body {
 #main {
     color: #e4e4e4;
 }
+
 .bannerBackgroundImage {
     width: auto;
     height: 100%;
@@ -66,7 +79,7 @@ body {
 }
 
 .profileImage {
-    width: 60vw;
+    width: 40vw;
     border-radius: 5%;
 }
 
@@ -109,17 +122,32 @@ body {
     font-size: 2em;
 }
 
-.socialLinker {
+.facebookLink i, .githubLink i, .twitterLink i, .linkedinLink i {
     color: #e4e4e4;
-}
-
-.socialLinker i {
     transition: ease-in-out 0.3s; 
 }
 
-.socialLinker:hover i{
+.socialLinker:hover {
     text-decoration: none;
-    color: #ffffff;
+}
+
+.facebookLink:hover i{
+    color: #3b5999;
+    transform: scale(1.2);
+}
+
+.githubLink:hover i {
+    color: #333;
+    transform: scale(1.2);
+}
+
+.twitterLink:hover i {
+    color: #55acee;
+    transform: scale(1.2);
+}
+
+.linkedinLink:hover i {
+    color: #0077B5;
     transform: scale(1.2);
 }
 
@@ -158,7 +186,13 @@ body {
     color: #222222;
 }
 
+#about .section-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .section-heading {
+    font-family: 'Lobster', cursive;
     text-align: center;
     font-size: 2em;
     font-weight: bold;
@@ -254,6 +288,81 @@ body {
     text-decoration: none;
 }
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 700px) {
+    .contactMailMessenger {
+        font-size: 4em;
+    }
+    
+}
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 1025px) {
+    
+    .break {
+        flex-basis: 100%;
+        height: 0;
+    }
+    /* Navbar */
+    .navbar-nav li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /* Main */
+    /*.bannerBackground {
+        height: auto;
+     } */
+
+    .bannerBackgroundImage {
+        width: 100%;
+        height: auto;
+    }
+
+    .bannerContent {
+        padding-top: 6em;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+    .profileImage {
+        width: 100%;
+    }
+
+    .Infos {
+        transform: scale(1.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .socialMediaIconsWrapper {
+        width: 100%;
+    }
+    
+    /* About */
+    #about .section-content {
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+    }
+
+
+    /* Contact */
+    .contact-c {
+        display: grid;
+        grid-template-columns: 1fr 5em 1fr;
+        grid-column-gap: 10px;
+    }
+
+    .contactOr, .contactMailMessenger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
